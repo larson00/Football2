@@ -1,6 +1,7 @@
 public class Main {
 
   public static void main(String[] args) {
+
     Teams Eagles = new Teams("Eagles", "NFC East", 91, 97,
         89, 84.9);
     Teams Redskins = new Teams("Redskins", "NFC East", 82, 87,
@@ -66,9 +67,6 @@ public class Main {
     Teams Browns = new Teams("Browns", "NFC South", 76, 81,
         77, 77.9);
 
-
-
-
     Teams[] TeamList = new Teams[32]; // change to 31 when full
     TeamList[0] = Eagles;
     TeamList[1] = Redskins;
@@ -103,16 +101,18 @@ public class Main {
     TeamList[30] = Bengals;
     TeamList[31] = Browns;
 
-
-
-
     //System.out.println(TeamList[0].getTeamName());
+    System.out.println(
+        "Team name" + "\t" + "Division" + "\t" + "Overall" + "\t" + "Offensive Rank" + "\t"
+            + "Defensive Rank"  + "\t" + "Starter Rank");
+    System.out.println("-------------------------------------------------------------------------");
 
     for (int i = 0; i < TeamList.length; i++) {
-      System.out.println(TeamList[i].getTeamName() + " " + TeamList[i].getDivision() + " " +
-          TeamList[i].getOvrRank() + " " + TeamList[i].getStarterRank() + " " + TeamList[i]
-          .getOffRank()
-          + " " + TeamList[i].getDefRank());
+      System.out.println(
+          TeamList[i].getTeamName() + "\t\t\t" + TeamList[i].getDivision() + "\t\t\t" +
+              TeamList[i].getOvrRank() + "\t\t\t" + TeamList[i].getOffRank() + "\t\t\t\t" + TeamList[i]
+              .getDefRank()
+              + "\t\t\t\t\t\t" + TeamList[i].getStarterRank());
     }
 
   }
